@@ -1,3 +1,102 @@
+function loadingAnimation(){
+    var tl = gsap.timeline()
+
+tl.from(".line h1,.line h3", {
+    y: 350,
+    stagger: 0.25,
+    duration: 0.6,
+    delay: 0.5,
+})
+
+
+tl.from(".line h5,h6",{
+    opacity: 0,
+    onStart: function () {
+        var h5timer = document.querySelector("#line-part1 h5")
+        var grow = 0;
+
+        setInterval(function () {
+
+            if (grow < 100) {
+
+                h5timer.innerHTML = grow++;
+            }
+            else {
+                
+                h5timer.innerHTML = grow;
+            }
+        }, 30)
+    }
+})
+
+
+tl.to(".line h2",{
+    animationName:"anime",
+    opacity:1,
+
+})
+
+tl.to("#loader", {
+    opacity: 0,
+    duration: 0.2,
+    delay: 4,
+});
+
+tl.from("#page1",{
+    delay:0.2,
+    y:1600,
+    opacity:0,
+    ease:Power4,
+})
+tl.to("#loader", {
+    display:"none",
+});
+
+}
+
+function redirect(){
+    window.location.href = "signup.html";
+}
+
+
+function LocomotiveScrollTrigger() {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const locoScroll = new LocomotiveScroll({
+        el: document.querySelector(".smooth-scroll"),
+        smooth: true,
+
+        // for tablet smooth
+        tablet: { smooth: true },
+
+        // for mobile
+        smartphone: { smooth: true }
+    });
+    locoScroll.on("scroll", ScrollTrigger.update);
+
+    ScrollTrigger.scrollerProxy(".smooth-scroll", {
+        scrollTop(value) {
+            return arguments.length
+                ? locoScroll.scrollTo(value, 0, 0)
+                : locoScroll.scroll.instance.scroll.y;
+        },
+        getBoundingClientRect() {
+            return {
+                top: 0,
+                left: 0,
+                width: window.innerWidth,
+                height: window.innerHeight
+            };
+        }
+
+        // follwoing line is not required to work pinning on touch screen
+
+        /* pinType: document.querySelector(".smooth-scroll").style.transform
+          ? "transform"
+          : "fixed"*/
+    });
+}
+
 function LocomotiveAnimation()
 {
     gsap.registerPlugin(ScrollTrigger);
@@ -22,16 +121,6 @@ function LocomotiveAnimation()
       // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
       pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
     });
-}
-
-
-function ShopNow(){
-    gsap.from("#text-content button",{
-        opacity:0,
-        y:200,
-        delay:3, 
-    })
-
 }
 
 function customTextAnimatiion()
@@ -59,59 +148,10 @@ function customTextAnimatiion()
             start:"top 60%",
             end:"top -10%",
             scrub:5,
+
         }  
     })
 }
-
-function gsapAnimation()
-{
-    
-    var tl = gsap.timeline();
-    tl.from("#nav h2",{
-        y:-20,
-        opacity:0,
-        delay:0,
-        duration:1,
-        stagger:0.2,
-    })
-    
-   
-
-  
-    
-    
-    
-    // tl.from("#main h5",{
-    
-    //     x:-100,
-    //     opacity:0,
-    //     duration:1,
-    // })
-    // tl.from("#main h6",{
-    
-    //     x:100,
-    //     opacity:0,
-    //     duration:0.5,
-    // })
-    
-    
-    // tl.from("#main h4",{
-    
-    //     x:-100,
-    //     opacity:0,
-    //     duration:1,
-    // })
-    
-    
-    
-    
-
-    
-    
-    
-}
-
-
 
 function horizontalScroll()
 {
@@ -132,33 +172,19 @@ function horizontalScroll()
 function scrollTriggerImg()
 {
     
-    gsap.from("#page4 h1",{
-        x:-300,
-        opacity:0,
-
-        scrollTrigger:{
-            trigger:"#page4 h1",
-            scroller:"#main",
-            start:"top 0",
-            end:"top 100%",
-            scrub:3,
-            
-        },
-    })
     
     gsap.from("#page4 img",{
         x:100,
         rotate:45,
         opacity:0,
-        duration:0.3,
-        stagger:0.4,
+        duration:0.5,
         
         scrollTrigger:{
             trigger:"#page4",
             scroller:"#main",
-            start:"top 0%",
-            end:"top -110%",
-            scrub:2,
+            top:"top 0",
+            end:"top -120%",
+            scrub:3,
             pin:true,
         },
     })
@@ -206,14 +232,12 @@ function scrollTriggerImg()
 
 
 
-
-
 // Function Calls
 
 
+loadingAnimation();
 
 LocomotiveAnimation();
-ShopNow();
 horizontalScroll()
 scrollTriggerImg();
 customTextAnimatiion();

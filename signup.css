@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+html,body
+{
+    width:100%;
+    height: 100%;
+    
+}
+
+#parts
+{
+    width:100%;
+    height:100vh;
+    display: flex;
+    
+}
+
+#left_part
+{
+    width: 40%;
+    height: 100%;
+    background: url("./background/promo.png");
+    background-size: cover;
+    
+}
+
+#right_part
+{
+    width: 60%;
+    height: 100%;
+    background-color: rgb(26, 25, 25);
+    position: relative;
+    overflow: hidden;
+}
+#right_part img
+{
+    position: absolute;
+    min-width: 1px;
+    width: 50px;
+    margin: 11px;
+    cursor: pointer;
+    object-fit: cover;
+}   
+
+
+#right_part h1
+{
+    
+    padding-top: 28px;
+    padding-left: 65px;
+    font-size: 30px;
+    font-family:monospace;
+    color:white;
+    letter-spacing: 8px;
+    cursor: pointer;
+}
+
+#form
+{
+    width: 100%;
+    
+    height: 70vh;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 1vw;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+
+
+#form h2
+{
+    color: white;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 3px;
+    margin-bottom:30px;
+    font-size: 35px;
+}
+
+#form input
+{
+    
+    width: 60%;
+    padding: 1vw;
+    border-radius: 10px;
+    outline: none;
+    border:none;
+    background-color: rgb(57, 57, 57);
+    color: white;
+    font-size: 15px;
+    
+}
+#form #submit
+{
+    margin-top: 20px;
+    max-width: 100%;
+    width: 80px;
+    padding:13px;
+    font-family:monospace;
+    font-size: 13px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    border:1px solid white;
+    color:white;
+    transition: all ease-in-out 0.5s;
+    
+}
+
+#form #submit:hover
+{
+    background-color: rgb(31, 255, 180);
+    color: black;
+    border: none;
+    box-shadow: 1px 1px 20px aquamarine;
+}
+
+a{
+    color: inherit;
+    text-decoration: inherit;
+}
+
+#form h4
+{
+    
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+}
+
+#form a
+{
+    text-decoration: underline;
+    color: rgb(112, 248, 248);
+}
+
+
+@media (max-width:1200px)
+{
+    #left_part
+    {
+        width: 0;
+    }
+
+    #right_part
+    {
+        width: 100%;
+    }
+
+}
