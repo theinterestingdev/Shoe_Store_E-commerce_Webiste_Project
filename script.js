@@ -70,24 +70,25 @@ function login(){
                 profileNameDiv.textContent = `${currentUser}`;
                 profileNameDiv.style.display = 'flex';
             });
+
+            document.querySelector("#logout_collapse h6").style.display="block";
         }
     });
     
 }
 
-function profileLogout()
-{
+function profileLogout() {
     const logout = document.querySelector("#logout_main h6");
 
-    if(logout.style.opacity==="0")
-    {
-        logout.style.opacity="1";
-    }
-    else
-    {
-        logout.style.opacity="0";
+    if (window.getComputedStyle(logout).display === "none") {
+        logout.style.display = "block";
+    } else {
+        logout.style.display = "none";
     }
 }
+
+
+
 
 function logoutCurr()
 {
@@ -98,6 +99,7 @@ function logoutCurr()
         profileNameDiv.style.display = 'none';
     });
     localStorage.removeItem("username");
+    document.querySelector("#logout_collapse h6").style.display="none";
     window.location.href="index.html";
 }
 

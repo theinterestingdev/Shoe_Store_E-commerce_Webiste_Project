@@ -306,7 +306,7 @@ body {
     font-size: 17px;
     position: absolute;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    right: 78px;
+    right: 86px;
     top:70px;
     border-radius: 10px;
 
@@ -314,7 +314,7 @@ body {
     padding:0.5vw;
     border:2px solid white;
     color:rgb(255, 43, 47);   
-    opacity: 0;
+    display: none;
     
 }
 
@@ -327,11 +327,14 @@ body {
 #logout_collapse h6
 {
     font-size: 17px;
-    color:rgb(255, 43, 47);   
+    color:rgb(255, 23, 27);   
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    border:1px solid white;
-    padding: 0.8vw;
+    
+    border: 2px solid white;
+    padding: 1.2vw;
     border-radius: 10px;
+    display: none;
+    
 }
 
 #logout_collapse h6:hover{
