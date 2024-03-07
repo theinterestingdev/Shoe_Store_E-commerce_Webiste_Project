@@ -54,9 +54,80 @@ tl.to("#loader", {
 
 }
 
+
+
+function login(){
+    document.addEventListener("DOMContentLoaded", function() {
+        const currentUser = localStorage.getItem("username");
+    
+        if (currentUser)
+        {
+            document.querySelectorAll(".login").forEach(button => {
+                button.style.display = 'none';
+            });
+    
+            document.querySelectorAll(".profileName").forEach(profileNameDiv =>{
+                profileNameDiv.textContent = `${currentUser}`;
+                profileNameDiv.style.display = 'flex';
+            });
+        }
+    });
+    
+}
+
+function profileLogout()
+{
+    const logout = document.querySelector("#logout_main h6");
+
+    if(logout.style.opacity==="0")
+    {
+        logout.style.opacity="1";
+    }
+    else
+    {
+        logout.style.opacity="0";
+    }
+}
+
+function logoutCurr()
+{
+    document.querySelectorAll(".login").forEach(button => {
+        button.style.display = 'flex';
+    });
+    document.querySelectorAll(".profileName").forEach(profileNameDiv =>{
+        profileNameDiv.style.display = 'none';
+    });
+    localStorage.removeItem("username");
+    window.location.href="index.html";
+}
+
+
+
+function hamburgerMenu()
+{
+    var menu = document.querySelector("#nav-part2");
+
+    if(menu.style.display=== "flex")
+    {
+        menu.style.display="none";
+    }
+    else
+    {
+        menu.style.display="flex";
+        gsap.from("#nav-part2",{
+            y:-100,
+            duration:0.7,
+            
+        });
+    }
+   
+}
+
 function redirect(){
     window.location.href = "signup.html";
 }
+
+
 
 
 function LocomotiveScrollTrigger() {
@@ -236,7 +307,7 @@ function scrollTriggerImg()
 
 
 loadingAnimation();
-
+login();
 LocomotiveAnimation();
 horizontalScroll()
 scrollTriggerImg();

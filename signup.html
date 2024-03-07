@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
+    <link rel="shortcut icon" href="./favicon/stylik.png" type="image/x-icon">
     <link rel="stylesheet" href="signup.css">
 </head>
 <body>
@@ -17,10 +18,10 @@
                 <h1 onclick="home()">tylik</h1>
                 <div id="form">
                     <h2>Sign Up</h2>
-                    <input type="username" placeholder="Enter Username">
-                    <input type="email" placeholder="Enter Email Address">
-                    <input type="password" placeholder="Enter Password">
-                    <button id="submit">Sign Up</button>
+                    <input id="username" type="username" placeholder="Enter Username">
+                    <input id="email" type="email" placeholder="Enter Email Address">
+                    <input id="psw" type="password" placeholder="Enter Password">
+                    <button onclick="SaveData()" id="submit">Sign Up</button>
                     <h4>Already have an account?<br><br>Click here to <a href="./login.html">login</a></h4>
                 </div>
 
