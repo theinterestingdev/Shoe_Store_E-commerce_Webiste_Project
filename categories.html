@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Categories</title>
+    <link rel="shortcut icon" href="./favicon/stylik.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="./categories.css">
+</head>
+<body>
+    <div id="main">
+        <div id="nav" data-scroll data-scroll-fixed data-scroll-target="#main">
+            <h2 id="brand_name"><span>S</span>tylik</h2>
+            <div id="nav-part2">
+                <a href="./index.html"><h3>Home</h3></a>
+                <a href="./categories.html"><h3>Categories</h3></a>
+                <a href="./deals.html"><h3>Deals</h3></a>
+                <a href="./contactus.html"><h3>ContactUs</h3></a>
+                <div id="icons_2">
+                    <i class="ri-search-line"></i>
+                    <i id="cart" class="ri-shopping-cart-2-line">
+                        <span>0</span>  
+                    </i>  
+                    
+                    <button class="login" onclick="redirect()">Login</button>
+                    <div class="profileName"></div>
+                    <div onclick="logoutCurr()" id="logout_collapse"><h6>Logout</h6></div>
+                </div>
+            </div>
+            <div id="nav-collapse">
+                <i  onclick="hamburgerMenu()" class="ri-menu-3-fill"></i>
+            </div>
+            
+            <div id="icons">
+                <i class="ri-search-line"></i>
+                <i id ="cart" class="ri-shopping-cart-2-line">
+                    <span>0</span>  
+                </i> 
+                
+                <button class="login" onclick="redirect()">Login</button>
+                <div onclick = "profileLogout()" id="profile_click" class="profileName"></div>
+                <div onclick = "logoutCurr()" id="logout_main"><h6>Logout</h6></div>
+            </div>
+        </div>
+        <div id="page1"data-scroll data-scroll-speed="-1">
+            <div id="search-container">
+                <input type="search" id="search-input" placeholder="Search Product Name Here"/>
+                <button id="search">Search</button>
+            </div>
+        </div>
+        <div class="cartTab">
+            <h1>Shopping Cart</h1>
+            <div class="listCart">
+                Show Item Here
+            </div>
+            <div class="btn">
+                <button class="close">CLOSE</button>
+                <button class="checkout">Check Out</button>
+            </div>
+            
+        </div>
+        <div id="page2">
+            <div id="contentTab">
+                Content in template file
+            </div>
+            
+            
+        </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./categories.js"></script>
+</body>
+</html>

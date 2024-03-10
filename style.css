@@ -1,7 +1,30 @@
+/*
+! Fonts
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@700&family=Ojuju:wght@200..800&family=Orbitron:wght@400..900&family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+
+
+/*
+! Fonts End
+*/
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Urbanist", sans-serif;
+
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
 }
 
 html,
@@ -202,7 +225,7 @@ body {
     width: 0;
     height: 2px;
     background-color: rgb(121, 255, 237);
-    transition: 0.3s ease-in-out;
+    
 }
 
 #nav-part2 h3:hover:before {
@@ -222,7 +245,7 @@ body {
     justify-content: flex-end;
     width: 12.7vw;
     font-size: 28px;
-    color: rgb(56, 247, 167);
+    
     cursor: pointer;
 }
 
@@ -294,8 +317,9 @@ body {
     justify-content: center;
     align-items: center;
     justify-self: flex-start;
-    color:rgb(0, 255, 247);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:white;
+    font-weight: 600;
+    
     
     
 }
@@ -436,7 +460,7 @@ body {
     padding: 2vw;
     width: 100%;
     height: 100vh;
-    background: url("https://r4.wallpaperflare.com/wallpaper/531/951/621/digital-digital-art-artwork-illustration-minimalism-hd-wallpaper-08869d3810a06c28a09cf1be487204ea.jpg  ");
+    background-color: #202020;
     background-size: cover;
 
 }
@@ -444,13 +468,62 @@ body {
 #page2 h1 {
     letter-spacing: 7px;
     color: #5d5d5d;
-    font-size: 2.2vw;
+    font-size: 4vw;
     text-align: center;
     font-weight: 900;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     line-height: 4.8vw;
-
 }
+
+#elem_main
+{
+    margin-top: 100px;
+}
+#page2 .elem
+{
+    
+    
+    white-space: nowrap;
+    
+}
+
+#page2 .elem h1
+{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 900;
+    text-transform: uppercase;
+    display: inline-block;
+    font-size:7.4vw;
+    margin-right: 16px;
+    animation-name: textmove;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    line-height: 1px;
+    line-height: 120px;
+}
+
+#page2 h2
+{
+    
+    font-size:1.1vw;
+    letter-spacing: 10px;
+    color: rgb(255, 255, 255);
+    
+}
+
+
+@keyframes textmove{
+    from{
+        transform: translateX(0);
+    }
+    to
+    {
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+
+
 
 /*
 ! Page2 End
@@ -502,21 +575,26 @@ body {
 #page4 {
     width: 100%;
     height: 101vh;
-    background-color: rgb(10, 10, 10);
+    background-image: url("https://r4.wallpaperflare.com/wallpaper/782/891/718/digital-art-video-games-shoes-nike-wallpaper-09c0784d013a7debe68718ff00d1e63d.jpg");
+    background-size: cover;
     position: relative;
+    
 
 }
 
 #page4 h1 {
-    font-family:Arial, Helvetica, sans-serif;
-    color: white;
+    font-family: "Orbitron", sans-serif;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px white;
+    
+    
     letter-spacing: 2vw;
     font-size: 8vw;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 900;
     width: 80%;
-    padding-left: 5vw;
-    padding-top: 7vw;
+    
+    
 }
 
 
@@ -538,15 +616,26 @@ body {
     height: 300px;
     top: 15%;
     right: 15%;
+    
+    
 }
 
 
 #img1 {
     rotate: 20deg;
+    border-radius: 30px;
 }
 
+
+
 #img2 {
-    rotate: 15deg;
+    rotate: 10deg;
+    border-radius: 30px;
+}
+
+#img3
+{
+    border-radius: 30px;
 }
 
 /*
@@ -570,14 +659,17 @@ body {
 {
     
     width: 100%;
-    height: 30vh;
+    height: 20vh;
     display: flex;
     justify-content: center;
+    margin-bottom:100px;
     align-items: flex-end;
-    color:rgb(26, 26, 26);
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px black;
     letter-spacing: 1.4vw;
     font-size: 4vw;
-    font-family:monospace;  
+    
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 #product_main
@@ -586,7 +678,7 @@ body {
     height: 100vh;
     display: flex;
     gap:40px;
-    padding: 5vw;
+    
     flex-wrap: wrap;
 }
 
@@ -601,6 +693,7 @@ body {
     overflow: hidden;
     cursor: pointer;
     border-radius: 30px;
+    margin: 0 auto;
     
 }
 
@@ -651,15 +744,235 @@ body {
 */
 
 
+/* 
+! Page6 
+*/
+
 #page6
 {
+    
     width: 100%;
     height: 100vh;
     background-color: rgb(30, 31, 28);
+    
+}
+
+
+#page6 #parts
+{
+    width: 100%;
+    height:100%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: hidden;
+    
+}
+
+#page6 #left_part
+{
+    width: 50%;
+    height:100%;
+    background: url("https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_552,c_limit/2496b1dd-4748-41ef-ad0f-ffe4360ef28d/nike-just-do-it.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all ease-in-out 1.2s;
+}
+#page6 #left_part:hover + #right_part {
+    width: 30%;
+    
+}
+#page6 #left_part:hover
+{
+    width: 70%;
+    
 }
 
 
 
+#page6 #left_part h1{
+    
+    
+    font-weight:900;
+    font-style: normal;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px white;
+    font-size: 3.5vw;
+    cursor: pointer;
+    font-family: "Roboto Mono", monospace;
+    height: 40vh;
+    font-style: italic;
+    width: 95%;
+    text-align: right;
+    padding: 1vw;
+    border-radius: 20px;
+    transition: all ease-in-out 0.5s;
+
+}
+
+#page6 #left_part:hover h1{
+    
+    background-color: rgb(255, 255, 255);
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px black;
+    text-align: center;
+    font-weight:900;
+    height: 15vh;
+
+    
+
+}
+
+
+
+#page6 #right_part
+{
+
+    width: 50%;
+    height:100%;
+    background: url("https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_552,c_limit/14626cbd-d790-48a1-aee6-5afc3e86a78a/image.png");
+    background-size: cover;
+    transition: all ease-in-out 1.2s;
+}
+
+/*
+! Page 6 End
+*/
+
+/*
+! Page 7
+*/
+
+#page7
+{
+    width: 100%;
+    height: 200vh;
+    background-color: #141414;
+}
+
+#page7 h1
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 30%;
+    
+    font-size: 7.5vw;
+    text-align: center;
+    color: white;
+}
+
+
+#page7 #center_line
+{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+
+#page7 #center_line h1
+{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 100;
+    font-size: 17vw;
+}
+
+#page7 #social_media_handles
+{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:50px;
+    flex-wrap: wrap;
+}
+
+#page7 #social_media_handles button
+{
+    padding:20px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color:white;
+    letter-spacing: 10px;
+    border:2px solid rgb(255, 255, 255);
+    display: flex;
+    border-radius: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition:all ease-in-out 0.3s;
+}
+
+
+#page7 #social_media_handles button:hover
+{
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 0, 98);
+    font-weight: 500;
+    transform: scale(1.1);
+}
+
+#end_line
+{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    
+    width: 100%;
+}
+
+#end_line_inner
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    border-radius: 50px;
+    height: 100%;
+    
+}
+
+#end_line_inner h2
+{
+    text-align: center;
+    font-size:3vw;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    letter-spacing: 6px;
+    
+}
+
+#last_line
+{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 3vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:30px;
+    
+    
+}
+
+#last_line h3
+{
+    
+    font-size: 1vw;
+    color:rgb(0, 0, 0);
+}
+
+#last_line img
+{
+    
+    height: 3vh;
+}
 
 
 
@@ -787,7 +1100,35 @@ body {
         color: rgb(56, 247, 167);
         cursor: pointer;
     }
-   
+
+    #page6
+    {
+        height: 190vh;
+    }
+
+    #page6 #parts
+    {
+        
+        flex-wrap: wrap;
+    }
+
+    #page6 #left_part
+    {
+        width: 100%;
+        height:50%;
+        background: url("https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_552,c_limit/2496b1dd-4748-41ef-ad0f-ffe4360ef28d/nike-just-do-it.jpg");
+        background-size: cover;
+    }
+
+
+    #page6 #right_part
+    {
+
+        width: 100%;
+        height:50%;
+        background: url("https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_552,c_limit/14626cbd-d790-48a1-aee6-5afc3e86a78a/image.png");
+        background-size: cover;
+    }
 
 }
 

@@ -1,0 +1,514 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 
+! Navbar Start 
+*/
+
+
+
+
+#nav {
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    padding: 14px 30px;
+    top: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+    width: 100%;
+    background-color: transparent;
+    border-bottom-left-radius: 50px;
+    box-shadow: 1px 1px 10px rgb(0, 0, 0);
+    border-bottom-right-radius: 50px;
+}
+
+#nav h2 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 22px;
+    margin-right: auto;
+    letter-spacing: 10px;
+    font-weight: 900;
+
+}
+
+
+#nav h2 span {
+    color: red;
+}
+
+
+#nav-part2 {
+
+    display: flex;
+    width: 52vw;
+    gap: 40px;
+    align-items: center;
+
+
+}
+
+#nav-part2 h3 {
+
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    letter-spacing: 3px;
+    font-size: 1.1vw;
+
+    position: relative;
+
+}
+
+#nav-part2 h3::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    transform: translateX(-50%);
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: rgb(121, 255, 237);
+    transition: 0.3s ease-in-out;
+}
+
+#nav-part2 h3:hover:before {
+    width: 100%;
+}
+
+#nav-part2 h3:hover {
+
+    color: rgb(0, 207, 138);
+    transform: scale(1.1);
+}
+
+
+#icons {
+    display: flex;
+    gap: 30px;
+    justify-content: flex-end;
+    width: 12.7vw;
+    font-size: 28px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+#nav-collapse {
+    font-size: 32px;
+    margin-right: 20px;
+    display: none;
+    cursor: pointer;
+
+}
+
+#cart {
+    position: relative;
+}
+
+
+
+#icons span {
+
+    position: absolute;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    top: -10px;
+    background-color: rgb(255, 0, 51);
+    border-radius: 10px;
+    width: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+
+}
+
+#icons_2 span {
+
+
+    position: absolute;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    top: -10px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    width: 20px;
+    text-align: center;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+
+}
+
+#icons .login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    width: fit-content;
+    padding: 1vw;
+    border: none;
+    color: rgb(255, 255, 255);
+    background-color: black;
+
+    cursor: pointer;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    transition: all ease-in-out 0.4s;
+}
+
+#icons .login:hover {
+    transform: scale(1.05);
+    box-shadow: 1px 1px 10px black;
+
+
+}
+
+#icons_2 {
+    display: none;
+}
+
+#icons_2 .login {
+
+    padding: 2vw;
+    border: 1px solid rgb(0, 255, 247);
+    border-radius: 10px;
+    width: 100px;
+    border: none;
+    color: rgb(255, 255, 255);
+    background-color: black;
+    cursor: pointer;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    transition: all ease-in-out 0.4s;
+}
+
+#icons_2 .login:hover {
+    transform: scale(1.05);
+    box-shadow: 1px 1px 10px black;
+
+
+}
+
+.profileName {
+    font-size: 18px;
+
+    justify-content: center;
+    align-items: center;
+    justify-self: flex-start;
+    color: rgb(255, 13, 33);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+}
+
+
+#logout_main h6 {
+    font-size: 17px;
+    position: absolute;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    right: 86px;
+    top: 70px;
+    border-radius: 10px;
+
+    width: fit-content;
+    padding: 0.5vw;
+    border: 2px solid rgb(0, 0, 0);
+    color: rgb(255, 43, 47);
+    display: none;
+
+}
+
+#logout_main h6:hover {
+    transform: scale(1.08);
+    background-color: aqua;
+    color: black;
+}
+
+#logout_collapse h6 {
+    font-size: 17px;
+    color: rgb(255, 23, 27);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    border: 2px solid white;
+    padding: 1.2vw;
+    border-radius: 10px;
+    display: none;
+
+}
+
+#logout_collapse h6:hover {
+    transform: scale(1.08);
+    background-color: aqua;
+    color: black;
+}
+
+/* 
+! Navbar End
+*/
+
+
+
+
+
+.cartTab {
+    background-color: #353432;
+    color: #eee;
+    width: 400px;
+    max-width: 100%;
+    position: fixed;
+    top: 61px;
+    right: 0;
+    bottom: 30px;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+
+}
+
+.cartTab h1 {
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+}
+
+.cartTab .btn {
+    display: flex;
+
+
+}
+
+.cartTab .btn button {
+    background-color: #E8BC0E;
+    border: none;
+    width: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+
+
+}
+
+.cartTab .btn .close {
+    background-color: white;
+}
+
+
+.cartTab .listCart {
+    overflow: auto;
+}
+
+.cartTab {
+    right: -400px;
+    transition: 0.5s;
+}
+
+body.activeTabCart .cartTab {
+    right: 0;
+}
+
+
+
+
+
+
+#page1 {
+    width: 100%;
+    height: 97vh;
+    position: relative;
+
+}
+
+
+#page2 {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+
+
+#search-container {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#search-container input {
+    background-color: transparent;
+    width: 40%;
+    border: none;
+    color: rgb(0, 0, 0);
+    border-bottom: 2px solid rgb(0, 0, 0);
+    padding: 10px 5px;
+    font-size: 15px;
+    outline: none;
+
+}
+
+::placeholder {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+
+
+
+#search-container input:focus {
+    border-bottom-color: rgb(200, 0, 255);
+}
+
+#search-container button {
+    border: none;
+    outline: none;
+    padding: 13px 25px;
+    margin-left: 10px;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    border: 1px solid rgb(0, 0, 0);
+    transition: all ease-in-out 0.6s;
+}
+
+
+#search-container button:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    box-shadow: 1px 1px 10px black;
+
+    cursor: pointer;
+
+}
+
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+
+
+
+}
+
+#buttons button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+    max-width: 10%;
+    border: 2px solid black;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
+
+}
+
+
+#buttons button:hover {
+    transform: scale(1.09);
+    background-color: blanchedalmond;
+}
+
+
+.listProduct {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.listProduct .item img {
+    width: 100%;
+
+}
+
+
+.listProduct .item h2 {
+    font-weight: 700;
+
+}
+
+
+
+@media screen and (max-width:992px) {
+
+    #nav {
+        height: 65px;
+    }
+
+    #nav h2 {
+        font-size: 30px;
+
+        width: 0;
+    }
+
+    #nav-part2 {
+        /* display: flex;  to apply when clicked*/
+
+        display: none;
+
+        flex-direction: column;
+        top: 65.9px;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        opacity: 1;
+        width: 100%;
+        position: absolute;
+        backdrop-filter: blur(30px);
+        height: 100vh;
+        padding-top: 10vw;
+
+
+    }
+
+    #nav-part2 h3 {
+
+        font-size: 20px;
+
+    }
+
+    #icons {
+        display: none;
+    }
+
+    #nav-collapse {
+        display: inline;
+    }
+
+    #icons_2 {
+        margin-top: 7px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+        width: 12.7vw;
+        font-size: 25px;
+        color: rgb(0, 255, 64);
+        cursor: pointer;
+    }
+
+}

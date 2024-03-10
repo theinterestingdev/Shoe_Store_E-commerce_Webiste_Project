@@ -36,6 +36,7 @@ tl.to(".line h2",{
 
 })
 
+
 tl.to("#loader", {
     opacity: 0,
     duration: 0.2,
@@ -53,8 +54,6 @@ tl.to("#loader", {
 });
 
 }
-
-
 
 function login(){
     document.addEventListener("DOMContentLoaded", function() {
@@ -86,8 +85,6 @@ function profileLogout() {
         logout.style.display = "none";
     }
 }
-
-
 
 
 function logoutCurr()
@@ -131,45 +128,6 @@ function redirect(){
 
 
 
-
-function LocomotiveScrollTrigger() {
-    gsap.registerPlugin(ScrollTrigger);
-
-    const locoScroll = new LocomotiveScroll({
-        el: document.querySelector(".smooth-scroll"),
-        smooth: true,
-
-        // for tablet smooth
-        tablet: { smooth: true },
-
-        // for mobile
-        smartphone: { smooth: true }
-    });
-    locoScroll.on("scroll", ScrollTrigger.update);
-
-    ScrollTrigger.scrollerProxy(".smooth-scroll", {
-        scrollTop(value) {
-            return arguments.length
-                ? locoScroll.scrollTo(value, 0, 0)
-                : locoScroll.scroll.instance.scroll.y;
-        },
-        getBoundingClientRect() {
-            return {
-                top: 0,
-                left: 0,
-                width: window.innerWidth,
-                height: window.innerHeight
-            };
-        }
-
-        // follwoing line is not required to work pinning on touch screen
-
-        /* pinType: document.querySelector(".smooth-scroll").style.transform
-          ? "transform"
-          : "fixed"*/
-    });
-}
-
 function LocomotiveAnimation()
 {
     gsap.registerPlugin(ScrollTrigger);
@@ -196,6 +154,7 @@ function LocomotiveAnimation()
     });
 }
 
+
 function customTextAnimatiion()
 {
     
@@ -214,12 +173,12 @@ function customTextAnimatiion()
     })
     gsap.to("#page2 h1 span",{
         color:"#E3E3C4",
-        stagger:0.5,
+        stagger:1,
         scrollTrigger:{
             trigger:"#page2",
             scroller:"#main",
-            start:"top 60%",
-            end:"top -10%",
+            start:"top 20%",
+            end:"top -110%",
             scrub:5,
 
         }  
@@ -250,14 +209,14 @@ function scrollTriggerImg()
         x:100,
         rotate:45,
         opacity:0,
-        duration:0.5,
+        duration:0.3,
         
         scrollTrigger:{
             trigger:"#page4",
             scroller:"#main",
             top:"top 0",
             end:"top -120%",
-            scrub:3,
+            scrub:2,
             pin:true,
         },
     })
