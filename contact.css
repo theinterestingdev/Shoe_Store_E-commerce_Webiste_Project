@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;
+    border: none;
+    outline: none;
+
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background: url("https://c1.wallpaperflare.com/path/811/367/789/technology-computer-creative-design-58af04bd8ec9cfffbd5f33322e0782eb.jpg");
+    background-size: cover;
+    overflow: hidden;
+
+}
+
+.container {
+    padding: 20px;
+    height: 80vh;
+    width: 100%;
+
+
+
+}
+
+.container h1 {
+    text-align: center;
+    letter-spacing: 10px;
+    margin-bottom: 10px;
+    color: white;
+
+    font-size: 50px;
+
+
+}
+
+.container h1::first-letter {
+    color: crimson;
+    font-size: 90px;
+}
+
+.contact_form {
+    width: 100%;
+    height: 100%;
+    background: url;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+
+
+.contact_form form {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    width: 50%;
+
+}
+
+
+::placeholder {
+    color: white;
+}
+
+.contact_form form input {
+    padding: 1vw;
+    background-color: transparent;
+    color: aqua;
+    border: 2px solid white;
+    font-size: 18px;
+}
+
+.input-box {
+    width: 100%;
+    height: 300px;
+    padding: 1vw;
+    background-color: transparent;
+    color: aqua;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+
+#submit {
+    text-align: center;
+    padding: 1vw;
+    border-radius: 30px;
+    background-color: transparent;
+    border:1px solid white;
+    color:white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
+}
+
+#submit:hover
+{
+    background-color: rgb(217, 98, 0);
+    color:rgb(255, 255, 255);
+    letter-spacing: 8px;
+    font-weight: 900;
+
+}
+
+
+@media screen and (max-width: 992px) {
+    .container h1 {
+        font-size: 30px;
+        margin-bottom: 60px;
+    }
+
+    .container h1::first-letter {
+        font-size: 50px;
+    }
+}

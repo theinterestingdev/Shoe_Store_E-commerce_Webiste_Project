@@ -1,57 +1,136 @@
-function loadingAnimation(){
+// function loadingAnimation(){
+//     var tl = gsap.timeline()
+
+// tl.from(".line h1,.line h3", {
+//     y: 350,
+//     stagger: 0.25,
+//     duration: 0.6,
+//     delay: 0.5,
+// })
+
+
+// tl.from(".line h5,h6",{
+//     opacity: 0,
+//     onStart: function () {
+//         var h5timer = document.querySelector("#line-part1 h5")
+//         var grow = 0;
+
+//         setInterval(function () {
+
+//             if (grow < 100) {
+
+//                 h5timer.innerHTML = grow++;
+//             }
+//             else {
+                
+//                 h5timer.innerHTML = grow;
+//             }
+//         }, 30)
+//     }
+// })
+
+
+// tl.to(".line h2",{
+//     animationName:"anime",
+//     opacity:1,
+
+// })
+
+
+// tl.to("#loader", {
+//     opacity: 0,
+//     duration: 0.2,
+//     delay: 4,
+// });
+
+// tl.from("#page1",{
+//     delay:0.2,
+//     y:1600,
+//     opacity:0,
+//     ease:Power4,
+// })
+// tl.to("#loader", {
+//     display:"none",
+// });
+
+// }
+
+
+function loadingAnimation()
+{
     var tl = gsap.timeline()
 
-tl.from(".line h1,.line h3", {
-    y: 350,
-    stagger: 0.25,
-    duration: 0.6,
-    delay: 0.5,
-})
+   
 
-
-tl.from(".line h5,h6",{
-    opacity: 0,
-    onStart: function () {
-        var h5timer = document.querySelector("#line-part1 h5")
-        var grow = 0;
-
-        setInterval(function () {
-
-            if (grow < 100) {
-
-                h5timer.innerHTML = grow++;
-            }
-            else {
-                
-                h5timer.innerHTML = grow;
-            }
-        }, 30)
+    tl.fromTo(".loading_page",
+    {opacity:0},
+    {
+        opacity:1,
+        duration:3.5,
+        dealy:1,
     }
-})
+    );
 
+    tl.fromTo(".logo_name",
+    {
+        y:50,
+        opacity:0, 
+    },
 
-tl.to(".line h2",{
-    animationName:"anime",
-    opacity:1,
+    {
+        y:0,
+        opacity:1,
+        duration:1,
+        
+    }
+    );
 
-})
+    tl.to(".loading_page",{
 
+        display:"none",
+    });
 
-tl.to("#loader", {
-    opacity: 0,
-    duration: 0.2,
-    delay: 4,
-});
+    tl.to(".welcome",{
+        backgroundColor:"white",
+    });
+    tl.fromTo(".wc",
+    {
+        y:-100,
+        duration:1,
+        opacity:0,
+        
+    },
 
-tl.from("#page1",{
-    delay:0.2,
+    {
+        y:0,
+        
+        opacity:1,
+        duration:2,
+        
+    }
+    );
+
+    tl.to(".welcome",
+    {
+        
+        duration:1,
+        opacity:0,
+        
+    }
+    );
+    
+    tl.to("#loader", {
+        display:"none",
+    });
+
+    tl.from("#page1",{
     y:1600,
+    duration:0.5,
     opacity:0,
     ease:Power4,
-})
-tl.to("#loader", {
-    display:"none",
-});
+    })
+
+    
 
 }
 
@@ -262,6 +341,24 @@ function scrollTriggerImg()
 }
 
 
+function footerAnimation()
+{
+    gsap.from("#page7 h1",{
+        
+        opacity:0,
+        duration:2.5,
+        x:-200,
+        scrollTrigger:{
+            trigger:"#page7",
+            scroller:"#main",
+            top:"top 90%",
+            end:"top -100%",
+        },
+    })
+
+
+}
+
 
 
 // Function Calls
@@ -273,6 +370,7 @@ LocomotiveAnimation();
 horizontalScroll()
 scrollTriggerImg();
 customTextAnimatiion();
+footerAnimation();
 
 
 

@@ -5,6 +5,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@700&family=Ojuju:wght@200..800&family=Orbitron:wght@400..900&family=Poppins:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+
+
 
 
 
@@ -38,6 +44,7 @@ body {
 #main {
     position: relative;
     background-color: black;
+    
  
 }
 
@@ -50,7 +57,7 @@ body {
 /*
 ! Loader
 */
-#loader {
+/* #loader {
     height: 100%;
     width: 100%;
     position: fixed;
@@ -145,9 +152,99 @@ body {
         font-weight: 500;
         opacity: 0;
     }
+} */
+
+.welcome
+{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1000;
+    position:fixed;
+    top:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+
+}
+
+.welcome p
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+    text-align: center;
+    position: relative;
+    font-size: 50px;
+    color:rgb(0, 0, 0);
+    font-family: "Michroma", sans-serif;
+}
+
+.loading_page
+{
+ 
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:25px;
+    
+    
 }
 
 
+#svg
+{
+    height: 150px;
+    width: 150px;
+    stroke: #000000;
+    fill-opacity: 0;
+    stroke-width: 3px;
+    stroke-dasharray:1000;
+    animation:draw 6s ease;
+}
+
+
+.logo_name
+{
+    width: 100%;
+    text-transform: uppercase;
+    margin-left: 12px;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 15px;
+    font-family: "Michroma", sans-serif;
+}
+
+@keyframes draw
+{
+    0%
+    {
+        stroke-dashoffset: 1000;
+    }
+    100%
+    {
+        stroke-dashoffset: 0;
+        background-color: rgb(255, 255, 255);
+        border-radius: 30px;
+        box-shadow: 1px 1px 15px white;
+        padding: 1vw;
+    }
+
+
+
+}
 
 
 /*
@@ -173,13 +270,11 @@ body {
     background: linear-gradient(180deg,rgb(16, 15, 15),rgb(9, 8, 8));
     border-bottom-left-radius: 50px;
     box-shadow: 1px 1px 10px rgb(0, 0, 0);
-    
-    
     border-bottom-right-radius: 50px;
 }
 
 #nav h2 {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
     font-size: 22px;
     margin-right: auto;
     letter-spacing: 10px;
@@ -206,13 +301,13 @@ body {
 #nav-part2 h3 {
 
     cursor: pointer;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Bebas Neue", sans-serif;
     text-transform: uppercase;
     font-family: sans-serif;
     letter-spacing: 3px;
     font-size: 1.1vw;
-    
     position: relative;
+    transition: all ease-in-out 0.3s;
     
 }
 
@@ -225,6 +320,7 @@ body {
     width: 0;
     height: 2px;
     background-color: rgb(121, 255, 237);
+    transition: all ease-in-out 0.4s;
     
 }
 
@@ -666,10 +762,10 @@ body {
     align-items: flex-end;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 2px black;
-    letter-spacing: 1.4vw;
+    font-weight: 900;
+    letter-spacing: 1vw;
     font-size: 4vw;
-    
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: "Urbanist", sans-serif;
 }
 
 #product_main
@@ -797,11 +893,10 @@ body {
     
     font-weight:900;
     font-style: normal;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1px white;
+    color: white;
     font-size: 3.5vw;
     cursor: pointer;
-    font-family: "Roboto Mono", monospace;
+
     height: 40vh;
     font-style: italic;
     width: 95%;
@@ -815,11 +910,10 @@ body {
 #page6 #left_part:hover h1{
     
     background-color: rgb(255, 255, 255);
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1px black;
+    color: black;
     text-align: center;
     font-weight:900;
-    height: 15vh;
+    height: 13vh;
 
     
 
@@ -1129,6 +1223,22 @@ body {
         background: url("https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_552,c_limit/14626cbd-d790-48a1-aee6-5afc3e86a78a/image.png");
         background-size: cover;
     }
+
+    #page6 #left_part:hover + #right_part {
+        width: 100%;
+        
+    }
+    #page6 #left_part:hover
+    {
+        width: 100%;
+        
+    }
+        
+    #page6 #left_part:hover h1{
+        
+        height: 7vw;
+    }
+    
 
 }
 
