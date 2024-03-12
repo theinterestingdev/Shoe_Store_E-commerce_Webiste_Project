@@ -307,7 +307,7 @@ function footerAnimation()
     gsap.from("#page7 h1",{
         
         opacity:0,
-        duration:2.5,
+        duration:2,
         x:-200,
         scrollTrigger:{
             trigger:"#page7",
