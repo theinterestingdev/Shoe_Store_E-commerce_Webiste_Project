@@ -2,7 +2,11 @@ function loadingAnimation()
 {
     var tl = gsap.timeline()
 
-
+    if (window.innerWidth < 768) {
+        tl.to("body", {
+            overflow:"hidden",
+        });
+    }
     tl.fromTo(".loading_page",
     {opacity:0},
     {
@@ -64,9 +68,7 @@ function loadingAnimation()
         display:"none",
     });
 
-    tl.to("body",{
-        overflowY:"auto",
-    });
+    
 
     tl.from("#page1",{
     y:1600,
@@ -74,12 +76,15 @@ function loadingAnimation()
     opacity:0,
     ease:Power4,
     })
-
-    
-
-    
-
+    if (window.innerWidth < 768) {
+        tl.to("body", {
+            overflow:"auto",
+        });
+    }
+   
 }
+
+
 
 function login(){
     document.addEventListener("DOMContentLoaded", function() {
@@ -331,7 +336,6 @@ function footerAnimation()
 
 
 // Function Calls
-
 loadingAnimation();
 LocomotiveAnimation();
 login();
