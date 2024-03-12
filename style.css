@@ -1145,10 +1145,24 @@ body {
         
     }
         
-    #page6 #left_part:hover h1{
-        
-        height: 7vw;
+    
+
+    #page6 #left_part h1
+    {
+        background-color: rgb(255, 255, 255);
+        color: black;
+        text-align: center;
+        font-weight:900;
+        height: 6vw;
+        letter-spacing: 5px;
     }
+
+    #page6 #left_part:hover h1
+    {
+        
+        height: 6vw;
+    }
+    
     
 
 }
