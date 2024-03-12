@@ -78,7 +78,7 @@ function loadingAnimation()
     })
     if (window.innerWidth < 768) {
         tl.to("body", {
-            overflow:"auto",
+            overflowY:"auto",
         });
     }
    
