@@ -1,5 +1,5 @@
 /*
-! Fonts
+! fonts
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@700&family=Ojuju:wght@200..800&family=Orbitron:wght@400..900&family=Poppins:wght@500&display=swap');
@@ -57,102 +57,7 @@ body {
 /*
 ! Loader
 */
-/* #loader {
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    z-index: 999;
-    background-color: #010101;
-    color: white;
-    padding: 18vh 7vw;
-}
 
-
-.line {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    height: fit-content;
-    overflow: hidden;
-    gap: 3vw
-}
-
-#line-part1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.4vw
-}
-
-#line-part1 h5,
-#line-part1 h6 {
-    font-size: 3vw;
-    font-weight: 100;
-    font-family: 'silk serif';
-}
-
-#line-part1 h5 {
-
-    width: 4vw;
-    text-align: left;
-}
-
-
-.line h1 {
-    font-size: 6.5vw;
-    text-transform: uppercase;
-    font-weight: 900;
-}
-
-.line h2 {
-
-    margin-top: 2vw;
-    text-align: right;
-    font-size: 1.5vw;
-    text-transform: uppercase;
-    font-weight: 900;
-    opacity: 0;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-}
-
-.line h3 {
-    margin-top: 1vw;
-    font-size: 3vw;
-    color: greenyellow;
-    letter-spacing: 10px;
-}
-
-@keyframes anime {
-    0% {
-        font-family: 'plane light';
-        -webkit-text-stroke: 1px white;
-        font-weight: 500;
-        opacity: 1;
-    }
-
-    47% {
-        font-family: 'plane light';
-        -webkit-text-stroke: 1px white;
-        font-weight: 500;
-        opacity: 0;
-    }
-
-    50% {
-        font-family: 'silk serif';
-        -webkit-text-stroke: 1px white;
-        font-weight: 500;
-        opacity: 1;
-    }
-
-    100% {
-        font-family: 'silk serif';
-        -webkit-text-stroke: 1px white;
-        -webkit-text-fill-color: transparent;
-        font-weight: 500;
-        opacity: 0;
-    }
-} */
 
 .welcome
 {
@@ -1106,12 +1011,19 @@ body {
 
 
     #page2 h1 {
+        
         letter-spacing: 5px;
-        font-size: 2.5vw;
+        font-size: 4.5vw;
         line-height: 5.2vw;
 
     }
 
+    #page2 h2
+    {
+        font-size: 2.1vw;
+        margin-top: 10px;
+        letter-spacing: 4px;
+    }
 
     #page4 h1 {
 

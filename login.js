@@ -22,24 +22,33 @@ tl.from("#form h2",{
 
 function SaveData()
 {
-    var username = document.getElementById("username").value;
-    var psw = document.getElementById("psw").value;
-    let user_records = new Array();
+    let username = document.getElementById("username").value;
+    let psw = document.getElementById("psw").value;
+    let output = document.getElementById("output_message");
     user_records = JSON.parse(localStorage.getItem("users")) || [];
 
-    if(user_records.some((v)=>{return v.username ===username &&  v.psw ===psw}))
-    {
-        alert("Login Successfull");
-        let current_user = user_records.find((v)=>{return v.username ===username &&  v.psw ===psw;});
-        localStorage.setItem("username",current_user.username); 
-        
-        window.location.href="index.html";
 
+    const check = user_records.find((chk)=>{return chk.username === username && chk.psw === psw});
+
+    if(check)
+    {
+        output.style.color = "greenyellow";
+        output.innerHTML = "Login Successful Redirecting...";
+        localStorage.setItem("username",check.username); 
+        
+        setTimeout(()=>{
+            window.location.href="index.html";
+        },2000);
 
     }
     else
     {
-        alert("Login Failed");
+        output.style.color = "red";
+        output.innerHTML = "Invalid Login Details";
+
+        setTimeout(()=>{
+            output.innerHTML = "";
+        },2000);
     }
 
    

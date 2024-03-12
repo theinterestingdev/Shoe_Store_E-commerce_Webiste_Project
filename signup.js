@@ -22,15 +22,23 @@ tl.from("#form h2",{
 
 function SaveData()
 {
-    var username = document.getElementById("username").value;
-    var email = document.getElementById("email").value;
-    var psw = document.getElementById("psw").value;
-    let user_records = new Array();
+    let username = document.getElementById("username").value;
+    let email = document.getElementById("email").value;
+    let psw = document.getElementById("psw").value;
+    let output = document.getElementById("output_message");
     user_records = JSON.parse(localStorage.getItem("users")) || [];
 
-    if(user_records.some((v)=>{return v.email ===email}))
+    if(user_records.find((chk)=>{return chk.email ===email || chk.username===username}))
     {
-        alert("Duplicate Data");
+        output.style.color = "red"; 
+        output.innerHTML = "User Already Exists";
+        
+        setTimeout(()=>
+        {
+            output.innerHTML = "";    
+        },2000);
+        
+        
     }
     else
     {
@@ -39,11 +47,13 @@ function SaveData()
             "email":email,
             "psw":psw
         })
+        localStorage.setItem("users",JSON.stringify(user_records));
+        output.style.color = "greenyellow"; 
+        output.innerHTML = "Signup Successful Redirecting...";
+        setTimeout(()=>
+        {
+            window.location.href="login.html";
+        },3000)
     }
-
-
-   
-
-    localStorage.setItem("users",JSON.stringify(user_records));
 }
 
