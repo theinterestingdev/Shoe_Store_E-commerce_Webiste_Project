@@ -2,7 +2,6 @@ function loadingAnimation()
 {
     var tl = gsap.timeline()
 
-   
 
     tl.fromTo(".loading_page",
     {opacity:0},
@@ -65,12 +64,18 @@ function loadingAnimation()
         display:"none",
     });
 
+    tl.to("body",{
+        overflowY:"auto",
+    });
+
     tl.from("#page1",{
     y:1600,
     duration:0.5,
     opacity:0,
     ease:Power4,
     })
+
+    
 
     
 
