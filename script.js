@@ -84,8 +84,6 @@ function loadingAnimation()
    
 }
 
-
-
 function login(){
     document.addEventListener("DOMContentLoaded", function() {
         const currentUser = localStorage.getItem("username");
